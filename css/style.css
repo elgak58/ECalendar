@@ -1,30 +1,6 @@
 @font-face {
-  font-family: 'CarroisGothicSC-Regular';
-  src: url('../../src/fonts/CarroisGothicSC-Regular.ttf')  format('truetype');
-}
-@font-face {
-  font-family: 'AguafinaScript-Regular';
-  src: url('../../src/fonts/AguafinaScript-Regular.ttf')  format('truetype');
-}
-
-@font-face {
-  font-family: "Janna-LT-Bold";
-  src: url("../../src/fonts/Janna-LT-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Janna-LT-Regular";
-  src: url("../../src/fonts/Janna-LT-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Calligraffitti-Regular";
-  src: url("../../src/fonts/Calligraffitti-Regular.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Quicksand";
-  src: url("../../src/fonts/Quicksand.ttf") format("truetype");
+  src: url("../src/fonts/Quicksand.ttf") format("truetype");
 }
 
 
@@ -74,6 +50,14 @@ body {
   position: relative;
   overflow: auto;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .page-title{
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 
@@ -288,24 +272,10 @@ body {
 
 
 
-/* .container h1.page-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
-} */
-
-/* .container .cont-wrap {
-  flex-grow: 1;
-  padding: 20px 60px 60px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-} */
 
 .container .cal {
-  width: 100%;
-  height: 100%;
+  width: 1000px;
+  flex-grow: 1;
   min-height: 300px;
   background-color: #fff;
   border-radius: 5px;
@@ -314,20 +284,11 @@ body {
   overflow-x: hidden;
 }
 
-/* .container .cal .months-list{
-  width: 150px;
-  height: 100%;
-  background: rgb(13,38,60);
-  background: linear-gradient(0deg, rgba(13,38,60,1) 0%, rgba(13,65,89,1) 100%);
-  border-radius: 5px 0 0 5px;
-} */
-
 .container .cal .months-list{
   min-width: 150px;
   height: 100%;
   background: rgb(13,38,60);
   background: linear-gradient(0deg, rgba(13,38,60,1) 0%, rgba(13,65,89,1) 100%);
-  /* border-radius: 5px 0 0 5px; */
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
@@ -525,35 +486,6 @@ body {
   font-weight: bold;
 }
 
-
-/* .container .cal .calendar .cal-table table {
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-}
-
-.container .cal .calendar .cal-table table th,
-.container .cal .calendar .cal-table table td{
-  width: calc(100% / 7);
-  text-align: center;
-  border-radius: 50%;
-}
-
-.container .cal .calendar .cal-table table td div{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.container .cal .calendar .cal-table table td div:hover:not(.disabled){
-  background-color: #D0E7F4;
-} */
-
 .container .cal .mnth-reminder{
   flex-grow: 1;
   height: 100%;
@@ -567,7 +499,6 @@ body {
   font-size: 1rem;
   font-weight: bold;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   padding: 15px 20px;
 } 
@@ -582,7 +513,6 @@ body {
 .container .cal .mnth-reminder .middle .task-list{
   width: 100%;
   height: 100%;
-  /* background-color: rgb(13 65 89 / 15%); */
   background-color: #eee;
   border: 1px solid var(--blue-clr);
   border-radius: 5px;
@@ -679,7 +609,6 @@ body {
 .container .cal .mnth-reminder .bottom .show-tasks-toggle{
   width: 60px;
   height: 34px;
-  /* border: 1px dashed red; */
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
@@ -698,11 +627,7 @@ body {
   display: none;
 }
 
-
-
-
-
-.slider {
+.container .cal .mnth-reminder .bottom .show-tasks-toggle .slider {
   width: 45px;
   height: 20px;
   border-radius: 50px;
@@ -713,7 +638,7 @@ body {
   position: relative;
 }
 
-.slider:before {
+.container .cal .mnth-reminder .bottom .show-tasks-toggle .slider:before {
   content: "";
   width: 16px;
   height: 16px;
@@ -727,15 +652,15 @@ body {
   transition: 150ms;
 }
 
-input:checked + .slider {
+.container .cal .mnth-reminder .bottom .show-tasks-toggle input:checked + .slider {
   background-color: var(--blue-clr);
 }
 
-input:focus + .slider {
+.container .cal .mnth-reminder .bottom .show-tasks-toggle input:focus + .slider {
   box-shadow: 0 0 1px var(--blue-clr);
 }
 
-input:checked + .slider:before {
+.container .cal .mnth-reminder .bottom .show-tasks-toggle input:checked + .slider:before {
   -webkit-transform: translate(25px, -50%);
   -ms-transform: translate(25px, -50%);
   transform: translate(25px, -50%);
