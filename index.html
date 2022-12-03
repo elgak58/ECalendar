@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Projects</title>
+</head>
+
+<body>
+  <div class="container">
+
+
+
+
+    <div class="dialog-bg">
+      <div class="dialog-window">
+        <section class="top">
+          <h1 class="page-title">Add new reminder</h1>
+        </section>
+        <section class="middle">
+          <form action="">
+            <input type="text" name="" id="reminder-title" placeholder="Reminder Title">
+            <div class="date-and-time">
+              <input type="date" name="" id="date">
+              <input type="time" name="" id="time" value="00:00">
+            </div>
+
+            <!-- <h2>Description</h2> -->
+            <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+          </form>
+        </section>
+        <section class="bottom">
+          <button id="add">Add</button>      
+          <button id="cancel">Cancel</button>      
+        </section>
+      </div>
+    </div>
+
+
+
+  
+    <!-- confirm delete reminder dialog -->
+    <div class="dialog2-bg">
+      <div class="dialog-window">
+        <section class="top">
+          <p>Are you sure that you want ot permanently delete the selected reminder?</p>
+        </section>
+        <section class="bottom">
+          <button id="cancel">Delete</button>      
+          <button id="create">Cancel</button>      
+        </section>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="cal">
+      <div class="months-list">
+        <div class="cur-year">
+          <a href="#" id="decrement">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Back</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/></svg>
+          </a>            
+          <span class="year"></span>
+          <a href="#" id="increment">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li><a href="#" class="" data-mn="1">January</a></li>
+          <li><a href="#" class="" data-mn="2">February</a></li>
+          <li><a href="#" class="" data-mn="3">March</a></li>
+          <li><a href="#" class="" data-mn="4">April</a></li>
+          <li><a href="#" class="" data-mn="5">May</a></li>
+          <li><a href="#" class="" data-mn="6">June</a></li>
+          <li><a href="#" class="" data-mn="7">July</a></li>
+          <li><a href="#" class="" data-mn="8">August</a></li>
+          <li><a href="#" class="" data-mn="9">September</a></li>
+          <li><a href="#" class="" data-mn="10">October</a></li>
+          <li><a href="#" class="" data-mn="11">November</a></li>
+          <li><a href="#" class="" data-mn="12">December</a></li>
+        </ul>
+      </div>
+      <div class="calendar">
+        <div class="month"></div>
+        <div class="cal-table-wrap">
+          <div class="cal-table">
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mnth-reminder">
+        <div class="top">
+          
+        </div>
+        <div class="middle">
+          <ul class="task-list">
+            <li>
+              <a href="#">
+                <div class="left">
+                  <span id="reminder-title">Team meeting</span>
+                  <p>02:30 AM - <span id="task-date">7/5/2022</span></p>
+                </div>
+                <div class="right">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>
+                  <svg id="delete-reminder" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Trash</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="left">
+                  <span id="reminder-title">Team meeting</span>
+                  <p>04:30 AM - <span id="task-date">2/11/2022</span></p>
+                </div>
+                <div class="right">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>
+                  <svg id="delete-reminder" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Trash</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="left">
+                  <span id="reminder-title">Team meeting</span>
+                  <p>01:30 PM - <span id="task-date">7/11/2022</span></p>
+                </div>
+                <div class="right">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>
+                  <svg id="delete-reminder" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Trash</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="left">
+                  <span id="reminder-title">Team meeting</span>
+                  <p>06:15 PM - <span id="task-date">15/11/2022</span></p>
+                </div>
+                <div class="right">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>
+                  <svg id="delete-reminder" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Trash</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <button id="add-reminder">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Add Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 176v160M336 256H176"/></svg>
+            <span>Add reminder</span>
+          </button>
+          <label class="show-tasks-toggle">
+            <input type="checkbox" id="task-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/date_management.js"></script>
+  <script src="./js/calendar.js"></script>
+</body>
+
+</html>
