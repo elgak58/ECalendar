@@ -224,6 +224,7 @@ deleteReminderButton.addEventListener("click", (e)=>{
     }
   }
   reminderForDelete.remove();
+  notifyDaysWithTasks();
   notifyMonthsWithTasks();
   confirmDeleteReminderDialog.style.display = "none";
 });
